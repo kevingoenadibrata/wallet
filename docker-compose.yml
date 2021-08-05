@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    command: --init-file /data/application/init.sql
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./wallet-db-init.sql:/data/application/init.sql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: wallet
+      MYSQL_USER: user123
+      MYSQL_PASSWORD: password123
+volumes:
+  db_data: {}
