@@ -21,7 +21,7 @@ The Mini Wallet can also run on local memory, these are steps to configure the a
 4. run `npm start`
 5. The wallet app should be running
 
-/Note: when using local memory, data does not persist if you kill the server and rerun it again./
+Note: when using local memory, data does not persist if you kill the server and rerun it again.
 
 ##  FAQ
 1. What if when I hit the API it says connection refused?
